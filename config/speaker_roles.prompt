@@ -1,0 +1,18 @@
+Please transform the provided list of text segments into a JSON array of objects. Each object must follow the schema:
+[
+  {
+    "content": "<text segment>",
+    "speaker": "<speaker name>",
+    "gender": "<M or F>"
+  }
+]
+
+Requirements:
+1. Return valid JSON only (no markdown, HTML, or explanatory text).
+2. The entire output must be a single JSON array (no additional keys).
+3. Each object must contain:
+   - "content" (string)
+   - "speaker" (the character or narrator who is attributed to the dialogue)
+   - "gender" (either "M" or "F")
+4. Do not include anything beyond the JSON (no extra commentary).
+5. DO NOT skip ANY elements in the list. Everything must be present in the JSON dump.
