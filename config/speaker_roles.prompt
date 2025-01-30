@@ -15,4 +15,4 @@ Requirements:
    - "speaker" (the character or narrator who is attributed to the dialogue)
    - "gender" (either "M" or "F")
 4. Do not include anything beyond the JSON (no extra commentary).
-5. DO NOT skip ANY elements in the list. Everything must be present in the JSON dump.
+5. DO NOT skip ANY intermediate narrator contents. Everything must be present in the JSON dump. 

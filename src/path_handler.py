@@ -1,5 +1,4 @@
 import os
-import json
 
 class PathVerifier:
     base_dir    = None

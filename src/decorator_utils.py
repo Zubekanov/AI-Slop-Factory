@@ -16,7 +16,7 @@ def process_printer(process_name: str):
         def wrapper(*args, **kwargs):
             start_time = datetime.now()
 
-            # We'll use an Event to signal the spinner thread to stop.
+            # Use an Event to signal the spinner thread to stop.
             stop_spinner = threading.Event()
 
             # This will cycle through: ".", "..", "...", ""

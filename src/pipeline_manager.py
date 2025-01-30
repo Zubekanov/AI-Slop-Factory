@@ -3,8 +3,8 @@ import json
 import os
 import shutil
 import random
+import requests
 from pydub import AudioSegment
-from time import sleep
 from decorator_utils import *
 from path_handler import *
 from request_handler import *
@@ -108,7 +108,7 @@ class PipelineManager:
         if not os.path.exists(unified_audio_file):
             self.unify_audio_files(audio_files_dir)
         
-        # Generate accompanying images for each audio clip.
+        # NOTE: Not using OpenAI images as it costs 10c per image, which is insanely expensive.
     
     @process_printer("Raw Script Generation")
     def generate_script_raw(self):
@@ -203,7 +203,6 @@ class PipelineManager:
         for audio in audio_files:
             unified_audio += audio
         unified_audio.export(os.path.join(self.pipeline_dir, "unified_audio.mp3"), format="mp3")
-
 
     # Check if the current working metadata file has the "done" key set to True.
     @staticmethod
